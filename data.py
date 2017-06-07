@@ -14,4 +14,14 @@ response = urllib.urlopen(url)
 data = json.loads(response.read())
 print data
 
-#parsing json data from url for python 3
+#recieving and storing data to database from json
+import json
+def lorason():
+    response.headers['content-type']='text/json'
+    lrjson=request.body.read()
+    loradb=json.loads(lrjson)
+    name=loradb['Name']
+    message=loradb['Message']
+    db.lora.insert(Name=name,Message=message)
+    db.commit()
+    return "Json sending successful.Thank you for your submission"
