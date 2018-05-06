@@ -1,20 +1,19 @@
 # Parsing json from directory 
-
-
+#Python 3.6
 import json
 m='file directory like D:\json\js.json'
 n=json.load(m)
-print n;
 
+#Parsing from URL
+import requests,json
+data=json.loads((requests.get('YOUR URL')).content)
 
 #parsing json data from url for python 2.7
 import urllib, json
-url = "http://maps.googleapis.com/maps/api/geocode/json?address=google"
-response = urllib.urlopen(url)
-data = json.loads(response.read())
-print data
+data = json.loads(urllib.urlopen('YOUR URL').read())
 
-#recieving and storing data to database from json
+
+#Simple example of parsing json in web2py function
 import json
 def lorason():
     response.headers['content-type']='text/json'
