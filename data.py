@@ -4,7 +4,7 @@ import json
 m='file directory like D:\json\js.json'
 n=json.load(m)
 
-#Parsing from URL
+#Parsing from URL in Python 3.6
 import requests,json
 data=json.loads((requests.get('YOUR URL')).content)
 
