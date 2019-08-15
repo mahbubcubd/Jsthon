@@ -1,8 +1,14 @@
 # Parsing json from directory 
-#Python 3.6
+#Python 3
 import json
-m='file directory like D:\json\js.json'
-n=json.load(m)
+# if the terminal open in the same directory where the json file is located
+data = json.loads(open("JSON FILE NAME").read()) # e.g: data = json.loads(open("myjson.json").read())
+"""Terminal Opened in any dorectory
+    FOR WINDOWS: data = json.loads(open("D:\path\to\jsonfile\myjson.json").read())
+    FOR Ubuntu: data = json.loads(open("/home/path/to/jsonfile/myjson.json").read())
+"""
+data = json.loads(open("FULL FILE PATH").read())
+
 
 #Parsing from URL in Python 3.6
 import requests,json
